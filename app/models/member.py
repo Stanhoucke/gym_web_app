@@ -6,9 +6,9 @@ class Member():
         self.age = age
         self.id = id
 
-    def full_name(self, first_name, last_name):
-        return f"{first_name} {last_name}"
+    def full_name(self):
+        return f"{self.first_name} {self.last_name}"
 
-    def increment_age(self, age):
-        age += 1
-        return f"{age}"
+    def increment_age(self):
+        self.age += 1
+        return f"{self.age}"
