@@ -11,4 +11,4 @@ class Member():
 
     def increment_age(self):
         self.age += 1
-        return f"{self.age}"
+        return self.age

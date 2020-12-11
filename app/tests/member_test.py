@@ -19,4 +19,11 @@ class TestMember(unittest.TestCase):
     # Gender attribute test
     def test_member_has_gender(self):
         self.assertEqual("male", self.member_1.gender)
+
+    # Age tests
+    def test_member_has_age(self):
+        self.assertEqual(34, self.member_1.age)
+
+    def test_increment_age__returns_age_plus_one(self):
+        self.assertEqual(35, self.member_1.increment_age())
        
