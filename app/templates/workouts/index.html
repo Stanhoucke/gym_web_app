@@ -14,6 +14,9 @@
                 <span class="workout-date">{{ workout.date }}</span>
                 <span class="workout-time">{{ workout.start_time }}</span>
             </div>
+            <div class="workout-edit">
+                <a href="/workouts/{{workout.id}}/edit">Edit Class</a>
+            </div>
         </div>
     {% endfor %}
 

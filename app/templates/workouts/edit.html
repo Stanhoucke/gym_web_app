@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Edit Class</h3>
+
+    <form action="/workouts/{{workout.id}}" method="post">
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" value="{{workout.name}}" required autofocus>
+        </div>
+        <div>
+        <label for="category">Category:</label>
+        <select id="category" name="category">
+                <option value="freestyle"
+                {% if workout.category == "freestyle" %} selected="selected" {% endif %}
+                >Freestyle</option>
+                <option value="classic"
+                {% if workout.category == "classic" %} selected="selected" {% endif %}
+                >Classic</option>
+                <option value="sprint"
+                {% if workout.category == "sprint" %} selected="selected" {% endif %}
+                >Sprint</option>
+                <option value="distance"
+                {% if workout.category == "distance" %} selected="selected" {% endif %}
+                >Distance</option>
+        </select>
+        </div>
+        <div>
+            <label for="upcoming"> Upcoming?</label>
+            <select id="upcoming" name="upcoming">
+                <option value="true"
+                {% if workout.upcoming == "true" %} selected="selected" {% endif %}
+                >Yes</option>
+                <option value="false"
+                {% if workout.upcoming == "false" %} selected="selected" {% endif %}
+                >No</option>
+        </select>
+        </div>
+        <div>
+            <label for="date">Date:</label>
+            <input type="text" id="date" name="date" value="{{workout.date}}" required autofocus>
+        </div>
+        <div>
+            <label for="start_time">Start time:</label>
+            <input type="text" id="start_time" name="start_time" value="{{workout.start_time}}" required autofocus>
+        </div>
+        <button type="submit">Edit Class</button>
+    </form>
+{% endblock %}
