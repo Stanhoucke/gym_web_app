@@ -35,7 +35,16 @@ def select_all():
 
 
 def workouts(member):
-    pass
+    workouts = []
+
+    sql = "SELECT workouts.* FROM workouts INNER JOIN bookings ON bookings.workout_id = workouts.id WHERE bookings.member_id = %s"
+    values = [member.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['id'])
+        workouts.append(workout)
+    return workouts
 
 # Update
 def update(member):

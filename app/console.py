@@ -28,6 +28,9 @@ booking_repository.save(booking_2)
 # print(booking_repository.select(booking_1.id))
 # print(booking_repository.select_all())
 
+# Join table selects
+print(member_repository.workouts(member_1))
+
 member_1.age = 35
 member_repository.update(member_1)
 workout_2.date = "16/12/2020"
