@@ -1,0 +1,31 @@
+header {
+    background-color: dodgerblue;
+    color: ghostwhite;
+    display: grid;
+    grid-template-areas: '. logo nav .';
+    grid-template-columns: 1fr 10fr 10fr 1fr;
+}
+
+#logo-text {
+    grid-area: logo;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#nav-bar {
+    grid-area: nav;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#nav-bar > ul {
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+
+#nav-bar > ul > li {
+    padding-left: 4%;
+    list-style: none;
+}

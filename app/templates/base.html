@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dragonne</title>
+    <!-- logo from: https://www.cleanpng.com/png-logo-dragon-graphic-design-dragon-logo-1445857/ -->
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/dragon_logo.png') }}">
+    
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+</head>
+<body>
+    <header id="grid-header">
+        <h1 id="logo-text">Dragonne</h1>
+        <nav id="nav-bar">
+            <ul>
+                <li><a href="/">Dashboard</a></li>
+                <li><a href="/classes">Classes</a></li>
+                <li><a href="/members">Members</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+    
+        {% endblock %}
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

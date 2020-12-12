@@ -1,0 +1,22 @@
+/* Background from: https://unsplash.com/photos/h9eV8vEwl-A */
+
+body {
+    background: url('/static/img/background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+
+main {
+    display: grid;
+    background-color: ghostwhite;
+    margin: 2%;
+    border-radius: 5px;
+}
+
+a:link, a:visited {
+    text-decoration: none;
+    color: ghostwhite;
+    font-weight: bold;
+}
