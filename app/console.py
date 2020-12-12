@@ -3,7 +3,8 @@ from models.workout import Workout
 import repositories.member_repository as member_repository
 import repositories.workout_repository as workout_repository
 
-# member_repository.delete_all()
+member_repository.delete_all()
+workout_repository.delete_all()
 
 member_1 = Member("Dario", "Cologna", "male", 34)
 member_repository.save(member_1)
@@ -24,5 +25,5 @@ workout_2.date = "16/12/2020"
 workout_2.upcoming = True
 workout_repository.update(workout_2)
 
-
+# workout_repository.delete(workout_1.id)
 # member_repository.delete(member_1.id)
