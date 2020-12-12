@@ -11,6 +11,8 @@ booking_repository.delete_all()
 
 member_1 = Member("Dario", "Cologna", "male", 34)
 member_repository.save(member_1)
+member_2 = Member("GUido", "Van Rossum", "male", 64)
+member_repository.save(member_2)
 workout_1 = Workout("Just Skate", "freestyle", True, "12/12/2020", "08:00")
 workout_repository.save(workout_1)
 workout_2 = Workout("Double Poling", "classic", False, "10/12/2020", "14:00")
@@ -19,6 +21,8 @@ booking_1 = Booking(member_1, workout_1)
 booking_repository.save(booking_1)
 booking_2 = Booking(member_1, workout_2)
 booking_repository.save(booking_2)
+booking_3 = Booking(member_2, workout_1)
+booking_repository.save(booking_3)
 
 # print(member_repository.select(member_1.id))
 # print(member_repository.select_all())
@@ -30,6 +34,7 @@ booking_repository.save(booking_2)
 
 # Join table selects
 print(member_repository.workouts(member_1))
+print(workout_repository.members(workout_1))
 
 member_1.age = 35
 member_repository.update(member_1)

@@ -47,7 +47,16 @@ def select_upcoming():
 
 
 def members(workout):
-    pass
+    members = []
+
+    sql = "SELECT members.* FROM members INNER JOIN bookings ON bookings.member_id = members.id WHERE bookings.workout_id = %s"
+    values = [workout.id]
+    results = run_sql(sql, values)
+
+    for row in results:
+        member = Member(row['first_name'], row['last_name'], row['gender'], row['age'], row['id'])
+        members.append(member)
+    return members
 
 # Update
 def update(workout):
