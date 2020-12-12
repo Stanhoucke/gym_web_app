@@ -12,11 +12,14 @@ workout_repository.save(workout_1)
 workout_2 = Workout("Double Poling", "classic", False, "10/12/2020", "14:00")
 workout_repository.save(workout_2)
 
+# print(member_repository.select(member_1.id))
+# print(member_repository.select_all())
+# print(workout_repository.select(workout_1.id))
+# print(workout_repository.select_all())
+# print(workout_repository.select_upcoming())
 
 member_1.age = 35
 member_repository.update(member_1)
 
-# print(member_repository.select(member_1.id))
-# print(member_repository.select_all())
 
 # member_repository.delete(member_1.id)
