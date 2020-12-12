@@ -1,15 +1,16 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3>Create New Class</h3>
+<div class="form">
+    <h3 class="form-title">Create New Class</h3>
 
     <form action="/workouts" method="post">
-        <div>
-            <label for="name">Name:</label>
+        <div class="form-field">
+            <label for="name">Name:</label><br>
             <input type="text" id="name" name="name" placeholder="Name" required autofocus>
         </div>
-        <div>
-        <label for="category">Category:</label>
+        <div class="form-field">
+        <label for="category">Category:</label><br>
         <select id="category" name="category">
                 <option value="freestyle">Freestyle</option>
                 <option value="classic">Classic</option>
@@ -17,21 +18,22 @@
                 <option value="distance">Distance</option>
         </select>
         </div>
-        <div>
-            <label for="upcoming"> Upcoming?</label>
+        <div class="form-field">
+            <label for="upcoming"> Upcoming?</label><br>
             <select id="upcoming" name="upcoming">
                 <option value="true">Yes</option>
                 <option value="false">No</option>
         </select>
         </div>
-        <div>
-            <label for="date">Date:</label>
+        <div class="form-field">
+            <label for="date">Date:</label><br>
             <input type="text" id="date" name="date" placeholder="dd/mm/yyyy" required autofocus>
         </div>
-        <div>
-            <label for="start_time">Start time:</label>
+        <div class="form-field">
+            <label for="start_time">Start time:</label><br>
             <input type="text" id="start_time" name="start_time" placeholder="hh:mm" required autofocus>
         </div>
         <button type="submit">Add Class</button>
     </form>
+</div>
 {% endblock %}

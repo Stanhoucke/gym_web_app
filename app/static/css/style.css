@@ -12,5 +12,5 @@ main {
     display: grid;
     background-color: ghostwhite;
     margin: 2%;
-    border-radius: 5px;
+    border-radius: 10px;
 }
