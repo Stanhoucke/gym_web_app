@@ -51,7 +51,7 @@ def members(workout):
 
 # Update
 def update(workout):
-    sql = "UPDATE workouts SET (name, cateogry, upcoming, date, start_time) = (%s, %s, %s, %s, %s) WHERE id = %s"
+    sql = "UPDATE workouts SET (name, category, upcoming, date, start_time) = (%s, %s, %s, %s, %s) WHERE id = %s"
     values = [workout.name, workout.category, workout.upcoming, workout.date, workout.start_time, workout.id]
     run_sql(sql, values)
 

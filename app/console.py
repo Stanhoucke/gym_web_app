@@ -20,6 +20,9 @@ workout_repository.save(workout_2)
 
 member_1.age = 35
 member_repository.update(member_1)
+workout_2.date = "16/12/2020"
+workout_2.upcoming = True
+workout_repository.update(workout_2)
 
 
 # member_repository.delete(member_1.id)
