@@ -39,14 +39,14 @@ def workouts(member):
 
 # Update
 def update(member):
-    pass
+    sql = "UPDATE members SET (first_name, last_name, gender, age) = (%s, %s, %s, %s) WHERE id = %s"
+    values = [member.first_name, member.last_name, member.gender, member.age, member.id]
+    run_sql(sql, values)
 
 # Delete
-def delete(member):
-    member = None
-
+def delete(id):
     sql = "DELETE FROM members WHERE id = %s"
-    values = [member.id]
+    values = [id]
     run_sql(sql, values)
 
 def delete_all():
