@@ -5,9 +5,9 @@ import repositories.member_repository as member_repository
 import repositories.workout_repository as workout_repository
 import repositories.booking_repository as booking_repository
 
-# member_repository.delete_all()
-# workout_repository.delete_all()
-# booking_repository.delete_all()
+member_repository.delete_all()
+workout_repository.delete_all()
+booking_repository.delete_all()
 
 member_1 = Member("Dario", "Cologna", "male", 34)
 member_repository.save(member_1)
@@ -25,8 +25,8 @@ booking_repository.save(booking_2)
 # print(workout_repository.select(workout_1.id))
 # print(workout_repository.select_all())
 # print(workout_repository.select_upcoming())
-print(booking_repository.select(booking_1.id))
-print(booking_repository.select_all())
+# print(booking_repository.select(booking_1.id))
+# print(booking_repository.select_all())
 
 member_1.age = 35
 member_repository.update(member_1)
@@ -36,3 +36,4 @@ workout_repository.update(workout_2)
 
 # workout_repository.delete(workout_1.id)
 # member_repository.delete(member_1.id)
+# booking_repository.delete(booking_1.id)
