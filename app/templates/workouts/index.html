@@ -1,5 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
-    List of workouts will go here
+    <h3>Upcoming Classes</h3>
+    {% for workout in workouts %}
+        <div class="workout">
+            <div class="workout-description">
+                <a class="workout-name" href="/workouts/{{workout.id}}">{{ workout.name }}</a>
+                <span class="category">Category: {{ workout.category }}</span>
+            </div>
+            <div class="workout-timing">
+                <span class="workout-date">{{ workout.date }}</span>
+                <span class="workout-time">{{ workout.start_time }}</span>
+            </div>
+        </div>
+    {% endfor %}
+
 {% endblock %}
