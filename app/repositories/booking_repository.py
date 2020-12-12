@@ -16,7 +16,7 @@ def select(id):
     booking = None
 
     sql = "SELECT * FROM bookings WHERE id = %s"
-    values = ['id']
+    values = [id]
     result = run_sql(sql, values)[0]
 
     if result is not None:

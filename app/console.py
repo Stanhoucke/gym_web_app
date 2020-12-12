@@ -25,6 +25,8 @@ booking_repository.save(booking_2)
 # print(workout_repository.select(workout_1.id))
 # print(workout_repository.select_all())
 # print(workout_repository.select_upcoming())
+print(booking_repository.select(booking_1.id))
+print(booking_repository.select_all())
 
 member_1.age = 35
 member_repository.update(member_1)
