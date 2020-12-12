@@ -11,7 +11,7 @@ booking_repository.delete_all()
 
 member_1 = Member("Dario", "Cologna", "male", 34)
 member_repository.save(member_1)
-member_2 = Member("GUido", "Van Rossum", "male", 64)
+member_2 = Member("Guido", "Van Rossum", "male", 64)
 member_repository.save(member_2)
 workout_1 = Workout("Just Skate", "freestyle", True, "12/12/2020", "08:00")
 workout_repository.save(workout_1)

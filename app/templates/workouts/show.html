@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    Shows members booked onto the selected class
+    <h3>{{ workout.name }}</h3>
+    <ul>
+        {% for member in members %}
+            <li>{{ member.full_name() }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
