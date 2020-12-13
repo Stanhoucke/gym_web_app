@@ -1,35 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="workouts">
-    <h3>Upcoming Classes</h3>
-    <a href="/workouts/new">New Class</a>
-
-    {% for workout in workouts %}
-        <div class="workout">
-            <div class="workout-name">
-                <a class="workout-name" href="/workouts/{{workout.id}}">{{ workout.name }}</a>
+<div id="dashboard-container">
+    <div class="workouts">
+        <h3>Upcoming Classes</h3>
+        <a href="/workouts/new">New Class</a>
+    
+        {% for workout in workouts %}
+            <div class="workout">
+                <div class="workout-name">
+                    <a class="workout-name" href="/workouts/{{workout.id}}">{{ workout.name }}</a>
+                </div>
+                <div class="workout-description">
+                    <span class="category">Category: {{ workout.category }}</span>
+                    {% if workout.upcoming == True %}
+                        <span class="upcoming">Upcoming Class</span>
+                    {% else %}
+                        <span class="upcoming">Past Class</span>
+                    {% endif %}
+                </div>
+                <div class="workout-timing">
+                    <span class="workout-date">{{ workout.date }}</span>
+                    <span class="workout-time">{{ workout.start_time }}</span>
+                </div>
+                <div class="workout-edit">
+                    <a href="/workouts/{{workout.id}}/edit">Edit Class</a>
+                </div>
             </div>
-            <div class="workout-description">
-                <span class="category">Category: {{ workout.category }}</span>
-                {% if workout.upcoming == True %}
-                    <span class="upcoming">Upcoming Class</span>
-                {% else %}
-                    <span class="upcoming">Past Class</span>
-                {% endif %}
-            </div>
-            <div class="workout-timing">
-                <span class="workout-date">{{ workout.date }}</span>
-                <span class="workout-time">{{ workout.start_time }}</span>
-            </div>
-            <div class="workout-edit">
-                <a href="/workouts/{{workout.id}}/edit">Edit Class</a>
-            </div>
-        </div>
-    {% endfor %}
-</div>
-
-<div class="stats">
-    <h3>Dashboard Statistics</h3>
+        {% endfor %}
+    </div>
+    
+    <div class="stats">
+        <h3>Dashboard Statistics</h3>
+    </div>
 </div>
 {% endblock %}

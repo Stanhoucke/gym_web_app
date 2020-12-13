@@ -4,8 +4,8 @@
     <h3>Bookings</h3>
     <a href="/bookings/new">New Booking</a>
 
-    <table>
-        <thead>
+    <table class="table">
+        <thead class="table-header">
             <tr>
                 <th>Booking Reference</th>
                 <th>Member</th>
@@ -16,7 +16,7 @@
         </thead>
         <tbody>
             {% for booking in bookings %}
-            <tr>
+            <tr class="table-row">
                 <td>{{ booking.id }}</td>
                 <td>{{ booking.member.full_name() }}</td>
                 <td>{{ booking.workout.name }}</td>
