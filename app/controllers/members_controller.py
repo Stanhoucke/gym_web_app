@@ -15,3 +15,18 @@ def show_member(id):
     workouts = member_repository.workouts(member)
     return render_template("members/show.html", member=member, workouts=workouts)
 
+# New
+@members_blueprint.route("/members/new")
+def new_member():
+    return render_template("members/new.html")
+
+@members_blueprint.route("/members", methods=['POST'])
+def create_member():
+    first_name  = request.form['first_name']
+    last_name   = request.form['last_name']
+    gender      = request.form['gender']
+    age         = request.form['age']
+
+    member = Member(first_name, last_name, gender, age)
+    member_repository.save(member)
+    return redirect('/members')
