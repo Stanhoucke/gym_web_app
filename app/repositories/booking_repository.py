@@ -34,7 +34,7 @@ def select_all():
     for row in results:
         member = member_repository.select(row['member_id'])
         workout = workout_repository.select(row['workout_id'])
-        booking = Booking(member, workout)
+        booking = Booking(member, workout, row['id'])
         bookings.append(booking)
     return bookings
 

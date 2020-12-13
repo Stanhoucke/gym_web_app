@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h3>Bookings</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Booking Reference</th>
+                <th>Member</th>
+                <th>Class Name</th>
+                <th>Class Category</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr>
+                <td>{{ booking.id }}</td>
+                <td>{{ booking.member.full_name() }}</td>
+                <td>{{ booking.workout.name }}</td>
+                <td>{{ booking.workout.category }}</td>
+            </tr>
+            {% endfor %}
+    </table>
+{% endblock %}
