@@ -1,5 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    Shows booked workouts for the selected member
+    <h3>{{ member.name }}</h3>
+    <ul>
+        {% for workout in workouts %}
+            <li>{{ workout.name }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}
