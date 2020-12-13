@@ -1,0 +1,18 @@
+.table {
+    border-spacing: 0;
+    margin: 1rem;
+    background-color: ghostwhite;
+}
+
+.table-header {
+    text-align: left;
+    background-color: powderblue;
+}
+
+.table-row:nth-child(even) {
+    background-color: powderblue;
+}
+
+.table td, .table th {
+    padding: 8px;
+}

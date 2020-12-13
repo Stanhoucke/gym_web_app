@@ -30,8 +30,46 @@
         {% endfor %}
     </div>
     
-    <div class="stats">
-        <h3>Dashboard Statistics</h3>
+    <div class="pictures">
+        <h3>Recent Class Photos</h3>
+        <div class="image-container">
+            <div id="image-1" class="image-item">
+                <h4>Classic</h4>
+            </div>
+            <div id="image-2" class="image-item">
+                <h4>Skating</h4>
+            </div>
+            <div id="image-3" class="image-item">
+                <h4>Sprint</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="bookings">
+        <h3>Bookings</h3>
+    <a href="/bookings/new">New Booking</a>
+
+    <table class="table">
+        <thead class="table-header">
+            <tr>
+                <th>Booking Reference</th>
+                <th>Member</th>
+                <th>Class Name</th>
+                <th>Class Category</th>
+                <th>Class Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for booking in bookings %}
+            <tr class="table-row">
+                <td>{{ booking.id }}</td>
+                <td>{{ booking.member.full_name() }}</td>
+                <td>{{ booking.workout.name }}</td>
+                <td>{{ booking.workout.category }}</td>
+                <td>{{ booking.workout.date_time() }}</td>
+            </tr>
+            {% endfor %}
+    </table>
     </div>
 </div>
 {% endblock %}
