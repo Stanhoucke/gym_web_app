@@ -45,7 +45,6 @@ def select_upcoming():
             workouts.append(workout)
     return workouts
 
-
 def members(workout):
     members = []
 

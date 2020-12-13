@@ -1,14 +1,22 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3>Upcoming Classes</h3>
+<div class="workouts">
+    <h3>All Classes</h3>
     <a href="/workouts/new">New Class</a>
 
     {% for workout in workouts %}
         <div class="workout">
-            <div class="workout-description">
+            <div class="workout-name">
                 <a class="workout-name" href="/workouts/{{workout.id}}">{{ workout.name }}</a>
+            </div>
+            <div class="workout-description">
                 <span class="category">Category: {{ workout.category }}</span>
+                {% if workout.upcoming == True %}
+                    <span class="upcoming">Upcoming Class</span>
+                {% else %}
+                    <span class="upcoming">Past Class</span>
+                {% endif %}
             </div>
             <div class="workout-timing">
                 <span class="workout-date">{{ workout.date }}</span>
@@ -19,5 +27,5 @@
             </div>
         </div>
     {% endfor %}
-
+</div>
 {% endblock %}

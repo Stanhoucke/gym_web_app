@@ -11,6 +11,7 @@
                 <th>Member</th>
                 <th>Class Name</th>
                 <th>Class Category</th>
+                <th>Class Date</th>
             </tr>
         </thead>
         <tbody>
@@ -20,6 +21,7 @@
                 <td>{{ booking.member.full_name() }}</td>
                 <td>{{ booking.workout.name }}</td>
                 <td>{{ booking.workout.category }}</td>
+                <td>{{ booking.workout.date_time() }}</td>
             </tr>
             {% endfor %}
     </table>
