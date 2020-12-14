@@ -16,7 +16,4 @@ class Workout():
         self.booked += 1
 
     def check_capacity(self):
-        if self.booked < self.capacity:
-            return True
-        else:
-            return False
+        return self.booked < self.capacity
