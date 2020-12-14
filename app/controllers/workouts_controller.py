@@ -1,6 +1,7 @@
 from flask import Flask, Blueprint, render_template, request, redirect
 from models.workout import Workout
 import repositories.workout_repository as workout_repository
+import datetime
 
 workouts_blueprint = Blueprint("workouts", __name__)
 
@@ -26,7 +27,13 @@ def create_workout():
     name        = request.form['name']
     category    = request.form['category']
     upcoming    = request.form['upcoming']
+    # Format date
     date        = request.form['date']
+    # Split the date into a list
+    split_date = date.split('-')
+    # create a new date object
+    date = datetime.date(int(split_date[0]), int(split_date[1]), int(split_date[2]))
+
     start_time  = request.form['start_time']
     # Create new Workout object
     workout = Workout(name, category, upcoming, date, start_time)
