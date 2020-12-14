@@ -31,6 +31,9 @@ def create_booking():
     booking = Booking(member, workout)
     # Save to db
     booking_repository.save(booking)
+    # Increment booking to workout and update workout
+    booking.workout.increment_booked()
+    workout_repository.update(workout)
     # Redirect
     return redirect('/bookings')
 
