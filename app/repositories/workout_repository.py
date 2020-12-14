@@ -4,8 +4,8 @@ from models.member import Member
 
 # Create
 def save(workout):
-    sql = "INSERT INTO workouts (name, category, upcoming, date, start_time) VALUES (%s, %s, %s, %s, %s) RETURNING id"
-    values = [workout.name, workout.category, workout.upcoming, workout.date, workout.start_time]
+    sql = "INSERT INTO workouts (name, category, upcoming, date, start_time, booked, capacity) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
+    values = [workout.name, workout.category, workout.upcoming, workout.date, workout.start_time, workout.booked, workout.capacity]
     result = run_sql(sql, values)
     workout.id = result[0]['id']
     return workout

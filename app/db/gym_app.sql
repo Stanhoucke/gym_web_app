@@ -8,7 +8,9 @@ CREATE TABLE workouts (
     category VARCHAR(255),
     upcoming BOOLEAN,
     date DATE,
-    start_time TIME
+    start_time TIME,
+    booked INT,
+    capacity INT
 );
 
 CREATE TABLE members (
