@@ -1,12 +1,12 @@
 class Workout():
-    def __init__(self, name, category, upcoming, date, start_time, capacity, id = None):
+    def __init__(self, name, category, upcoming, date, start_time, capacity, booked=0, id = None):
         self.name = name
         self.category = category
         self.upcoming = upcoming
         self.date = date
         self.start_time = start_time
-        self.booked = 0
         self.capacity = capacity
+        self.booked = booked
         self.id = id
 
     def date_time(self):

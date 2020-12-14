@@ -19,7 +19,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        workout = Workout(result['name'], result['category'], result['upcoming'], result['date'], result['start_time'], result['id'])
+        workout = Workout(result['name'], result['category'], result['upcoming'], result['date'], result['start_time'], result['capacity'], result['id'])
     return workout
 
 def select_all():
@@ -29,7 +29,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['id'])
+        workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['capacity'], row['id'])
         workouts.append(workout)
     return workouts
 
