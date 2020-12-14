@@ -5,7 +5,8 @@ import datetime
 class TestWorkout(unittest.TestCase):
     def setUp(self):
         self.date = datetime.date(2020, 12, 16)
-        self.workout_1 = Workout("Just Skate", "freestyle", True, self.date, "08:00")
+        self.time = datetime.time(6, 15)
+        self.workout_1 = Workout("Just Skate", "freestyle", True, self.date, self.time)
 
     def test_workout_has_name(self):
         self.assertEqual("Just Skate", self.workout_1.name)
@@ -21,10 +22,10 @@ class TestWorkout(unittest.TestCase):
         self.assertEqual(self.date, self.workout_1.date)
 
     def test_workout_has_start_time(self):
-        self.assertEqual("08:00", self.workout_1.start_time)
+        self.assertEqual(self.time, self.workout_1.start_time)
 
     # def test_date_time__returns_date_and_time(self):
-        self.assertEqual("2020-12-16 08:00", self.workout_1.date_time())
+        self.assertEqual("2020-12-16 06:15:00", self.workout_1.date_time())
     
 
     

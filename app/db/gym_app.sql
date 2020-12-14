@@ -8,7 +8,7 @@ CREATE TABLE workouts (
     category VARCHAR(255),
     upcoming BOOLEAN,
     date DATE,
-    start_time VARCHAR(255)
+    start_time TIME
 );
 
 CREATE TABLE members (
