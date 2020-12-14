@@ -40,12 +40,12 @@ booking_repository.save(booking_1)
 # member_1.age = 35
 # member_repository.update(member_1)
 # workout_2.date = "16/12/2020"
-workout_2.upcoming = True
+# workout_2 = Workout("Double Poling", "classic", True, datetime.date(2020, 12, 10), datetime.time(10,30), 3, id=25)
 # booking_1.workout.increment_booked()
-workout_repository.update(workout_2)
+# workout_repository.update(workout_2)
 
 # # workout_repository.delete(workout_1.id)
 # # member_repository.delete(member_1.id)
 # # booking_repository.delete(booking_1.id)
 
-# print(workout_1.start_time)
+print(workout_1.upcoming)

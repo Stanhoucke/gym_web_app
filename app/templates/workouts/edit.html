@@ -30,7 +30,7 @@
             <label for="upcoming"> Upcoming?</label><br>
             <select id="upcoming" name="upcoming">
                 <option value="true"
-                {% if workout.upcoming == "true" %} selected="selected" {% endif %}
+                {% if workout.upcoming == "false" %} selected="selected" {% endif %}
                 >Yes</option>
                 <option value="false"
                 {% if workout.upcoming == "false" %} selected="selected" {% endif %}

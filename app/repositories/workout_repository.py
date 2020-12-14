@@ -25,7 +25,7 @@ def select(id):
 def select_all():
     workouts = []
 
-    sql = "SELECT * FROM workouts ORDER BY date ASC"
+    sql = "SELECT * FROM workouts ORDER BY date DESC"
     results = run_sql(sql)
 
     for row in results:
@@ -36,7 +36,7 @@ def select_all():
 def select_upcoming():
     workouts = []
 
-    sql = "SELECT * FROM workouts"
+    sql = "SELECT * FROM workouts ORDER BY date ASC"
     results = run_sql(sql)
 
     for row in results:

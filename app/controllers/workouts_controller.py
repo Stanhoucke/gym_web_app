@@ -77,7 +77,7 @@ def update_workout(id):
     start_time = datetime.time(int(split_start_time[0]), int(split_start_time[1]))
 
     # Create new Workout object
-    workout = Workout(name, category, upcoming, date, start_time, capacity, id)
+    workout = Workout(name, category, upcoming, date, start_time, capacity, id=id)
     # Update in db
     workout_repository.update(workout)
     # Redirect
