@@ -34,7 +34,12 @@ def create_workout():
     # create a new date object
     date = datetime.date(int(split_date[0]), int(split_date[1]), int(split_date[2]))
 
+    # Format time
     start_time  = request.form['start_time']
+    # Split the time into a list
+    split_start_time = start_time.split(':')
+    # create new time object
+    start_time = datetime.time(int(split_start_time[0]), int(split_start_time[1]))
 
     # Create new Workout object
     workout = Workout(name, category, upcoming, date, start_time)
@@ -61,7 +66,13 @@ def update_workout(id):
     split_date = date.split('-')
     # create a new date object
     date = datetime.date(int(split_date[0]), int(split_date[1]), int(split_date[2]))
+    
+    # Format time
     start_time  = request.form['start_time']
+    # Split the time into a list
+    split_start_time = start_time.split(':')
+    # create new time object
+    start_time = datetime.time(int(split_start_time[0]), int(split_start_time[1]))
 
     # Create new Workout object
     workout = Workout(name, category, upcoming, date, start_time, id)
