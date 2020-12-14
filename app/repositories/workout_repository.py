@@ -4,8 +4,8 @@ from models.member import Member
 
 # Create
 def save(workout):
-    sql = "INSERT INTO workouts (name, category, upcoming, date, start_time, booked, capacity) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
-    values = [workout.name, workout.category, workout.upcoming, workout.date, workout.start_time, workout.booked, workout.capacity]
+    sql = "INSERT INTO workouts (name, category, upcoming, date, start_time, capacity, booked) VALUES (%s, %s, %s, %s, %s, %s, %s) RETURNING id"
+    values = [workout.name, workout.category, workout.upcoming, workout.date, workout.start_time, workout.capacity, workout.booked]
     result = run_sql(sql, values)
     workout.id = result[0]['id']
     return workout
@@ -29,7 +29,7 @@ def select_all():
     results = run_sql(sql)
 
     for row in results:
-        workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['capacity'], row['id'])
+        workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['capacity'], row['booked'], row['id'])
         workouts.append(workout)
     return workouts
 
@@ -40,7 +40,7 @@ def select_upcoming():
     results = run_sql(sql)
 
     for row in results:
-        workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['id'])
+        workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['capacity'], row['booked'], row['id'])
         if workout.upcoming:
             workouts.append(workout)
     return workouts
@@ -59,8 +59,8 @@ def members(workout):
 
 # Update
 def update(workout):
-    sql = "UPDATE workouts SET (name, category, upcoming, date, start_time) = (%s, %s, %s, %s, %s) WHERE id = %s"
-    values = [workout.name, workout.category, workout.upcoming, workout.date, workout.start_time, workout.id]
+    sql = "UPDATE workouts SET (name, category, upcoming, date, start_time, capacity, booked) = (%s, %s, %s, %s, %s, %s, %s) WHERE id = %s"
+    values = [workout.name, workout.category, workout.upcoming, workout.date, workout.start_time, workout.capacity, workout.booked, workout.id]
     run_sql(sql, values)
 
 # Delete
