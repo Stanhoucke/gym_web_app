@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3>{{ member.name }}</h3>
+    <h3>{{ member.full_name() }}</h3>
     <ul>
         {% for workout in workouts %}
             <li>{{ workout.name }}</li>

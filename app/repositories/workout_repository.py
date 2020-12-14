@@ -25,7 +25,7 @@ def select(id):
 def select_all():
     workouts = []
 
-    sql = "SELECT * FROM workouts"
+    sql = "SELECT * FROM workouts ORDER BY date ASC"
     results = run_sql(sql)
 
     for row in results:

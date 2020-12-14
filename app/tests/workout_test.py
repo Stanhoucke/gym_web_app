@@ -1,9 +1,11 @@
 import unittest
 from models.workout import Workout
+import datetime
 
 class TestWorkout(unittest.TestCase):
     def setUp(self):
-        self.workout_1 = Workout("Just Skate", "freestyle", True, "12/12/2020", "08:00")
+        self.date = datetime.date(2020, 12, 16)
+        self.workout_1 = Workout("Just Skate", "freestyle", True, self.date, "08:00")
 
     def test_workout_has_name(self):
         self.assertEqual("Just Skate", self.workout_1.name)
@@ -16,13 +18,13 @@ class TestWorkout(unittest.TestCase):
 
     # Date and time tests
     def test_workout_has_date(self):
-        self.assertEqual("12/12/2020", self.workout_1.date)
+        self.assertEqual(self.date, self.workout_1.date)
 
     def test_workout_has_start_time(self):
         self.assertEqual("08:00", self.workout_1.start_time)
 
-    def test_date_time__returns_date_and_time(self):
-        self.assertEqual("12/12/2020 08:00", self.workout_1.date_time())
+    # def test_date_time__returns_date_and_time(self):
+        self.assertEqual("2020-12-16 08:00", self.workout_1.date_time())
     
 
     
