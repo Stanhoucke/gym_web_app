@@ -19,8 +19,5 @@ class TestBooking(unittest.TestCase):
     def test_booking_has_workout(self):
         self.assertEqual(self.workout_1, self.booking_1.workout)
 
-    # Methods
-    def test_booking_checks_capacity_and_updates_workout_booked(self):
-        self.assertEqual(True, self.booking_1.check_capacity())
-        self.assertEqual(1, self.booking_1.workout.booked)
+    
 
