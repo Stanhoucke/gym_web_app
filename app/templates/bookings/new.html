@@ -17,7 +17,7 @@
             <label for="workout">Class:</label><br>
             <select id="workout" name="workout">
                 {% for workout in workouts %}
-                <option value="{{ workout.id }}">{{ workout.name }}</option>
+                <option value="{{ workout.id }}">{{ workout.name }} | {{ workout.date }}</option>
                 {% endfor %}
             </select>
         </div>
