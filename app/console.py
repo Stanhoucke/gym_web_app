@@ -40,9 +40,9 @@ booking_repository.save(booking_1)
 # member_1.age = 35
 # member_repository.update(member_1)
 # workout_2.date = "16/12/2020"
-# workout_2.upcoming = True
-booking_1.workout.increment_booked()
-workout_repository.update(workout_1)
+workout_2.upcoming = True
+# booking_1.workout.increment_booked()
+workout_repository.update(workout_2)
 
 # # workout_repository.delete(workout_1.id)
 # # member_repository.delete(member_1.id)

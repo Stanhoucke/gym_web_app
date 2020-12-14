@@ -2,6 +2,7 @@
 
 {% block content %}
     <h3>{{ workout.name }}</h3>
+    <h4>{{ workout.booked }}/{{ workout.capacity }} places booked</h4>
     <ul>
         {% for member in members %}
             <li>{{ member.full_name() }}</li>
