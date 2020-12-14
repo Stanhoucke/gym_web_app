@@ -33,6 +33,13 @@ class TestWorkout(unittest.TestCase):
     def test_date_time__returns_date_and_time(self):
         self.assertEqual("2020-12-16 06:15:00", self.workout_1.date_time())
 
+    def test_check_upcoming__returns_true(self):
+        self.assertEqual(True, self.workout_1.check_upcoming())
+    
+    def test_check_upcoming__returns_false(self):
+        self.workout_1.date = datetime.date(2020, 12, 13)
+        self.assertEqual(False, self.workout_1.check_upcoming())
+    
     # Capacity tests
     def test_increment_booked__returns_1(self):
         self.workout_1.increment_booked()

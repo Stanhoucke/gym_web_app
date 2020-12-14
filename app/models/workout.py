@@ -1,3 +1,5 @@
+import datetime
+
 class Workout():
     def __init__(self, name, category, upcoming, date, start_time, capacity, booked=0, id = None):
         self.name = name
@@ -17,3 +19,6 @@ class Workout():
 
     def check_capacity(self):
         return self.booked < self.capacity
+
+    def check_upcoming(self):
+        return self.date >= datetime.date.today()
