@@ -14,3 +14,11 @@ main {
     margin: 2%;
     border-radius: 10px;
 }
+
+.flashes {
+    background-color: mediumspringgreen;
+    color: darkgreen;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}

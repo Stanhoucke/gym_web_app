@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, flash
 
 from controllers.members_controller import members_blueprint
 from controllers.workouts_controller import workouts_blueprint
@@ -8,6 +8,7 @@ import repositories.workout_repository as workout_repository
 import repositories.booking_repository as booking_repository
 
 app = Flask(__name__)
+app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
 
 app.register_blueprint(members_blueprint)
 app.register_blueprint(workouts_blueprint)

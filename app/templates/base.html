@@ -12,6 +12,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bookings.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <h3 class=flashes role="alert">
+            {% for message in messages %}
+                {{ message }}
+            {% endfor %}
+            </h3>
+        {% endif %}
+    {% endwith %}
 </head>
 <body>
     <header id="grid-header">

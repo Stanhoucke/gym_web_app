@@ -1,4 +1,4 @@
-from flask import Flask, Blueprint, render_template, request, redirect
+from flask import Flask, Blueprint, render_template, request, redirect, flash
 from models.booking import Booking
 from models.workout import Workout
 import repositories.booking_repository as booking_repository
@@ -35,6 +35,8 @@ def create_booking():
     # Increment booking to workout and update workout
     booking.workout.increment_booked()
     workout_repository.update(workout)
+    # Flash success message
+    flash(f"{booking.member.first_name} was added to {booking.workout.name}!")
     # Redirect
     return redirect('/bookings')
 
@@ -50,5 +52,8 @@ def remove_booking(id):
     # Decrease booked in workout and updte db
     workout.decrease_booked()
     workout_repository.update(workout)
+    # Flash success message
+    flash(f"Removed {booking.member.first_name} from {booking.workout.name}!")
+    # Redirect
     return redirect('/bookings')
 
