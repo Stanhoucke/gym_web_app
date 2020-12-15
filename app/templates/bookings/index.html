@@ -25,7 +25,7 @@
                 <td>{{ booking.workout.date_time() }}</td>
                 <td>
                     <form action="/bookings/{{ booking.id }}/delete" method="POST">
-                        <button type="submit">Delete Booking</button>
+                        <button class="delete-button" type="submit">Delete Booking</button>
                     </form>
                 </td>
             </tr>

@@ -22,3 +22,13 @@ main {
     margin: 0;
     padding: 10px;
 }
+
+button {
+    background-color: darkblue;
+    color: ghostwhite;
+    margin: 0% 25% 3% 25%;
+}
+.delete-button {
+    background-color: darkred;
+    margin: 0;
+}
