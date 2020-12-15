@@ -41,7 +41,7 @@ def select_upcoming():
 
     for row in results:
         workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['capacity'], row['booked'], row['id'])
-        if workout.upcoming:
+        if workout.check_upcoming():
             workouts.append(workout)
     return workouts
 
