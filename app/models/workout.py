@@ -16,6 +16,9 @@ class Workout():
     def increment_booked(self):
         self.booked += 1
 
+    def decrease_booked(self):
+        self.booked -= 1
+
     def check_capacity(self):
         return self.booked < self.capacity
 

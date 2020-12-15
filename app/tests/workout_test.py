@@ -42,6 +42,11 @@ class TestWorkout(unittest.TestCase):
         self.workout_1.increment_booked()
         self.assertEqual(1, self.workout_1.booked)
 
+    def test_decrease_booked__returns_0(self):
+        self.workout_1.increment_booked()
+        self.workout_1.decrease_booked()
+        self.assertEqual(0, self.workout_1.booked)
+
     def test_check_capacity__returns_true(self):
         self.assertEqual(True, self.workout_1.check_capacity())
 

@@ -12,6 +12,7 @@
                     <a class="workout-name" href="/workouts/{{workout.id}}">{{ workout.name }}</a>
                 </div>
                 <div class="workout-description">
+                    <span class="capacity">Capacity: {{ workout.booked }}/{{ workout.capacity }}</span>
                     <span class="category">Category: {{ workout.category }}</span>
                     {% if workout.check_upcoming() == True %}
                         <span class="upcoming">Upcoming Class</span>
