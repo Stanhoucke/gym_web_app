@@ -27,17 +27,6 @@
         </select>
         </div>
         <div class="form-field">
-            <label for="upcoming"> Upcoming?</label><br>
-            <select id="upcoming" name="upcoming">
-                <option value="true"
-                {% if workout.upcoming == True %} selected="selected" {% endif %}
-                >Yes</option>
-                <option value="false"
-                {% if workout.upcoming == False %} selected="selected" {% endif %}
-                >No</option>
-        </select>
-        </div>
-        <div class="form-field">
             <label for="date">Date:</label><br>
             <input type="date" id="date" name="date" value="{{workout.date}}" required autofocus>
         </div>
