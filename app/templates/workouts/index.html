@@ -13,7 +13,7 @@
             <div class="workout-description">
                 <span class="capacity">Capacity: {{ workout.booked }}/{{ workout.capacity }}</span>
                 <span class="category">Category: {{ workout.category }}</span>
-                {% if workout.upcoming == True %}
+                {% if workout.check_upcoming() == True %}
                     <span class="upcoming">Upcoming Class</span>
                 {% else %}
                     <span class="upcoming">Past Class</span>
