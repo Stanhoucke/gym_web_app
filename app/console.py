@@ -27,6 +27,15 @@ workout_repository.update(workout_1)
 # booking_repository.save(booking_2)
 # booking_3 = Booking(member_2, workout_1)
 # booking_repository.save(booking_3)
+# id = booking_1.id
+# booking = booking_repository.select(id)
+# workout_id = booking.workout.id
+# workout = workout_repository.select(workout_id)
+# # Decrease booked in workout
+# workout.decrease_booked()
+# workout_repository.update(workout)
+# # Delete booking
+# booking_repository.delete(id)
 
 # # print(member_repository.select(member_1.id))
 # # print(member_repository.select_all())

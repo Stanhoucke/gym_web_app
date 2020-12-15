@@ -12,6 +12,7 @@
                 <th>Class Name</th>
                 <th>Class Category</th>
                 <th>Class Date</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -22,6 +23,11 @@
                 <td>{{ booking.workout.name }}</td>
                 <td>{{ booking.workout.category }}</td>
                 <td>{{ booking.workout.date_time() }}</td>
+                <td>
+                    <form action="/bookings/{{ booking.id }}/delete" method="POST">
+                        <button type="submit">Delete Booking</button>
+                    </form>
+                </td>
             </tr>
             {% endfor %}
     </table>

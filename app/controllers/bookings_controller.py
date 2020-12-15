@@ -1,5 +1,6 @@
 from flask import Flask, Blueprint, render_template, request, redirect
 from models.booking import Booking
+from models.workout import Workout
 import repositories.booking_repository as booking_repository
 import repositories.member_repository as member_repository
 import repositories.workout_repository as workout_repository
@@ -35,5 +36,19 @@ def create_booking():
     booking.workout.increment_booked()
     workout_repository.update(workout)
     # Redirect
+    return redirect('/bookings')
+
+# Delete booking
+@bookings_blueprint.route("/bookings/<id>/delete", methods=['POST'])
+def remove_booking(id):
+    # Select workout from booking
+    booking = booking_repository.select(id)
+    workout_id = booking.workout.id
+    workout = workout_repository.select(workout_id)
+    # Delete booking
+    booking_repository.delete(id)
+    # Decrease booked in workout and updte db
+    workout.decrease_booked()
+    workout_repository.update(workout)
     return redirect('/bookings')
 
