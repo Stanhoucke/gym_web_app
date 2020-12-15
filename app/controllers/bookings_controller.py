@@ -17,6 +17,11 @@ def bookings():
 def new_booking():
     members = member_repository.select_all()
     workouts = workout_repository.select_all()
+    # Flash list of fully booked workouts
+    for workout in workouts:
+        if not workout.check_capacity():
+            flash(f"{workout.name} is fully booked", 'full')
+
     return render_template("bookings/new.html", members=members, workouts=workouts)
 
 
@@ -36,7 +41,7 @@ def create_booking():
     booking.workout.increment_booked()
     workout_repository.update(workout)
     # Flash success message
-    flash(f"{booking.member.first_name} was added to {booking.workout.name}!")
+    flash(f"{booking.member.first_name} was added to {booking.workout.name}!", "success")
     # Redirect
     return redirect('/bookings')
 
@@ -53,7 +58,7 @@ def remove_booking(id):
     workout.decrease_booked()
     workout_repository.update(workout)
     # Flash success message
-    flash(f"Removed {booking.member.first_name} from {booking.workout.name}!")
+    flash(f"Removed {booking.member.first_name} from {booking.workout.name}!", "success")
     # Redirect
     return redirect('/bookings')
 

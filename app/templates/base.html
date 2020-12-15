@@ -13,13 +13,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bookings.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/members_workouts.css') }}">
-    {% with messages = get_flashed_messages() %}
+    {% with messages = get_flashed_messages(with_categories=true) %}
         {% if messages %}
-            <h3 class=flashes role="alert">
-            {% for message in messages %}
-                {{ message }}
+        <div class=flashes>
+            {% for category, message in messages %}
+                <h3 class="{{category}}" role="alert">
+                    {{ message }}
+                </h3>
             {% endfor %}
-            </h3>
+        </div>
         {% endif %}
     {% endwith %}
 </head>

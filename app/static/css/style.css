@@ -16,7 +16,12 @@ main {
     border-radius: 10px;
 }
 
-.flashes {
+.section-header {
+    margin: 10px;
+}
+
+/* Flash messages */
+.flashes .success {
     background-color: mediumspringgreen;
     color: darkgreen;
     text-align: center;
@@ -24,6 +29,15 @@ main {
     padding: 10px;
 }
 
+.flashes .full {
+    background-color: rgb(230, 57, 70);
+    color: rgb(241, 250, 238);
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Buttons and links */
 button {
     background-color: rgb(29, 53, 87);
     color: ghostwhite;
@@ -38,8 +52,4 @@ button {
 
 a {
     color: rgb(230, 57, 70);
-}
-
-.section-header {
-    margin: 10px;
 }
