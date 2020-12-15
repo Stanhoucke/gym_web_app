@@ -1,10 +1,9 @@
 import datetime
 
 class Workout():
-    def __init__(self, name, category, upcoming, date, start_time, capacity, booked=0, id = None):
+    def __init__(self, name, category, date, start_time, capacity, booked=0, id = None):
         self.name = name
         self.category = category
-        self.upcoming = upcoming
         self.date = date
         self.start_time = start_time
         self.capacity = capacity

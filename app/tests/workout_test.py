@@ -6,16 +6,13 @@ class TestWorkout(unittest.TestCase):
     def setUp(self):
         self.date = datetime.date(2020, 12, 16)
         self.time = datetime.time(6, 15)
-        self.workout_1 = Workout("Just Skate", "freestyle", True, self.date, self.time, 3)
+        self.workout_1 = Workout("Just Skate", "freestyle", self.date, self.time, 3)
 
     def test_workout_has_name(self):
         self.assertEqual("Just Skate", self.workout_1.name)
 
     def test_workout_has_category(self):
         self.assertEqual("freestyle", self.workout_1.category)
-
-    def test_workout_has_upcoming(self):
-        self.assertEqual(True, self.workout_1.upcoming)
     
     def test_workout_has_no_members_booked(self):
         self.assertEqual(0, self.workout_1.booked)

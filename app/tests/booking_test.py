@@ -10,7 +10,7 @@ class TestBooking(unittest.TestCase):
 
         self.date = datetime.date(2020, 12, 16)
         self.time = datetime.time(6, 15)
-        self.workout_1 = Workout("Just Skate", "freestyle", True, self.date, self.time, 3)
+        self.workout_1 = Workout("Just Skate", "freestyle", self.date, self.time, 3)
         self.booking_1 = Booking(self.member_1, self.workout_1)
 
     def test_booking_has_member(self):

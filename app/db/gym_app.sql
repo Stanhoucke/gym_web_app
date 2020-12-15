@@ -6,7 +6,6 @@ CREATE TABLE workouts (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255),
     category VARCHAR(255),
-    upcoming BOOLEAN,
     date DATE,
     start_time TIME,
     capacity INT,
