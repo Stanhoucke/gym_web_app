@@ -42,7 +42,7 @@ def workouts(member):
     results = run_sql(sql, values)
 
     for row in results:
-        workout = Workout(row['name'], row['category'], row['upcoming'], row['date'], row['start_time'], row['id'])
+        workout = Workout(row['name'], row['category'], row['date'], row['start_time'], row['id'])
         workouts.append(workout)
     return workouts
 

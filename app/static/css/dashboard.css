@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 3fr;
 }
 
-#dashboard-container > .workouts {
+#dashboard-container > .workouts-container {
     grid-area: upcoming-classes;
 }
 
@@ -18,7 +18,7 @@
 /* Class images */
 .image-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex-wrap: wrap;
     padding-right: 20px;
 }
@@ -28,7 +28,9 @@
     color: midnightblue;
     display: flex;
     align-items: flex-end;
+    margin: 10px;
 }
+
 .image-item > h4 {
     margin: 0px 0px 20px 20px;
 }
@@ -38,7 +40,6 @@
     background: url('/static/img/classic_ski.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0;
     height: 250px;
     width: 250px;
 }
@@ -47,7 +48,6 @@
     background: url('/static/img/skate_ski.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0;
     height: 250px;
     width: 250px;
 }
@@ -56,7 +56,6 @@
     background: url('/static/img/sprint_ski.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0;
     height: 250px;
     width: 250px;
 }

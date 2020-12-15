@@ -1,15 +1,17 @@
 .workout-container, .member-container {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .workout, .member {
-    /* padding: 10px; */
     margin: 10px;
     border-style: solid;
     border-color: darkblue;
     border-radius: 10px;
-    flex: 25%;
+    /* flex: 25%; */
+    width: 250px;
+    flex-grow: 0;
     display: grid;
     grid-template-areas:
     'name'
