@@ -1,10 +1,13 @@
 {% extends "base.html" %}
 
 {% block content %}
+<h1 class="section-header">Hogwarts Nordic Ski Club</h1>
 <div id="dashboard-container">
     <div class="workouts">
-        <h3>Upcoming Classes</h3>
-        <a href="/workouts/new">New Class</a>
+        <div class="section-header">
+            <h3>Upcoming Classes</h3>
+            <a href="/workouts/new">New Class</a>
+        </div>
     
         <div class="workout-container">
             {% for workout in workouts %}
@@ -31,7 +34,7 @@
     </div>
     
     <div class="pictures">
-        <h3>Recent Class Photos</h3>
+        <h3 class="section-header">Recent Class Photos</h3>
         <div class="image-container">
             <div id="image-1" class="image-item">
                 <h4>Classic</h4>
@@ -46,9 +49,10 @@
     </div>
 
     <div class="bookings">
-        <h3>Bookings</h3>
-    <a href="/bookings/new">New Booking</a>
-
+        <div class="section-header">
+            <h3>Bookings</h3>
+            <a href="/bookings/new">New Booking</a>
+        </div>
     <table class="table">
         <thead class="table-header">
             <tr>

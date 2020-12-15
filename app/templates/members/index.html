@@ -1,8 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h3>Club Members</h3>
-    <a href="/members/new">Add New Member</a>
+    <div class="section-header">
+        <h3>Club Members</h3>
+        <a href="/members/new">Add New Member</a>
+    </div>
 
     <div class="member-container">
         {% for member in members %}
