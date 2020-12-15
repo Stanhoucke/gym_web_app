@@ -4,19 +4,21 @@
     <h3>Club Members</h3>
     <a href="/members/new">Add New Member</a>
 
-    {% for member in members %}
-        <div class="memebr">
-            <div class="member-name">
-                <a href="/members/{{member.id}}"> {{ member.full_name() }}</a>
+    <div class="member-container">
+        {% for member in members %}
+            <div class="member">
+                <div class="member-name">
+                    <a href="/members/{{member.id}}"> {{ member.full_name() }}</a>
+                </div>
+                <div class="member-details">
+                    <span>{{ member.age }}</span>
+                    <span>{{ member.gender}} </span>
+                </div>
+                <div class="member-edit">
+                    <a href="/members/{{member.id}}/edit">Edit Member</a>
+                </div>
             </div>
-            <div class="member-details">
-                <span>{{ member.age }}</span>
-                <span>{{ member.gender}} </span>
-            </div>
-            <div class="member-edit">
-                <a href="/members/{{member.id}}/edit">Edit Member</a>
-            </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 
 {% endblock %}

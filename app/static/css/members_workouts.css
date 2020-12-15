@@ -1,0 +1,44 @@
+.workout-container, .member-container {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.workout, .member {
+    /* padding: 10px; */
+    margin: 10px;
+    border-style: solid;
+    border-color: darkblue;
+    border-radius: 10px;
+    flex: 25%;
+    display: grid;
+    grid-template-areas:
+    'name'
+    'details'
+    'edit';
+}
+
+.workout-name, .member-name {
+    display: flex;
+    justify-content: space-between;
+    background-color: darkblue;
+    color: ghostwhite;
+    padding: 10px;
+    grid-area: name;
+}
+
+.workout-name a, .member-name a {
+    color: ghostwhite;
+    padding: 0;
+}
+
+.workout-details, .member-details {
+    grid-area: details;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.workout-edit, .member-edit {
+    grid-area: edit;
+    padding: 10px;
+}

@@ -5,28 +5,27 @@
     <h3>All Classes</h3>
     <a href="/workouts/new">New Class</a>
 
-    {% for workout in workouts %}
-        <div class="workout">
-            <div class="workout-name">
-                <a class="workout-name" href="/workouts/{{workout.id}}">{{ workout.name }}</a>
+    <div class="workout-container">
+        {% for workout in workouts %}
+            <div class="workout">
+                <div class="workout-name">
+                    <a class="workout-name" href="/workouts/{{workout.id}}">{{ workout.name }}</a>
+                    <span class="capacity">Capacity: {{ workout.booked }}/{{ workout.capacity }}</span>
+                </div>
+                <div class="workout-details">
+                    <span class="workout-date">{{ workout.date_time() }}</span>
+                    <span class="category">Category: {{ workout.category }}</span>
+                    {% if workout.check_upcoming() == True %}
+                        <span class="upcoming">Upcoming Class</span>
+                    {% else %}
+                        <span class="upcoming">Past Class</span>
+                    {% endif %}
+                </div>
+                <div class="workout-edit">
+                    <a href="/workouts/{{workout.id}}/edit">Edit Class</a>
+                </div>
             </div>
-            <div class="workout-description">
-                <span class="capacity">Capacity: {{ workout.booked }}/{{ workout.capacity }}</span>
-                <span class="category">Category: {{ workout.category }}</span>
-                {% if workout.check_upcoming() == True %}
-                    <span class="upcoming">Upcoming Class</span>
-                {% else %}
-                    <span class="upcoming">Past Class</span>
-                {% endif %}
-            </div>
-            <div class="workout-timing">
-                <span class="workout-date">{{ workout.date }}</span>
-                <span class="workout-time">{{ workout.start_time }}</span>
-            </div>
-            <div class="workout-edit">
-                <a href="/workouts/{{workout.id}}/edit">Edit Class</a>
-            </div>
-        </div>
-    {% endfor %}
+        {% endfor %}
+    </div>
 </div>
 {% endblock %}
