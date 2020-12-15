@@ -26,7 +26,6 @@ def create_workout():
     # Form data
     name        = request.form['name']
     category    = request.form['category']
-    upcoming    = request.form['upcoming']
     capacity    = request.form['capacity']
     # Format date
     date        = request.form['date']
@@ -43,7 +42,7 @@ def create_workout():
     start_time = datetime.time(int(split_start_time[0]), int(split_start_time[1]))
 
     # Create new Workout object
-    workout = Workout(name, category, upcoming, date, start_time, capacity)
+    workout = Workout(name, category, date, start_time, capacity)
     # Save to db
     workout_repository.save(workout)
     # Redirect
@@ -60,7 +59,6 @@ def update_workout(id):
     # Form data
     name        = request.form['name']
     category    = request.form['category']
-    upcoming    = request.form['upcoming']
     capacity    = request.form['capacity']
     # Format date
     date        = request.form['date']
@@ -77,7 +75,7 @@ def update_workout(id):
     start_time = datetime.time(int(split_start_time[0]), int(split_start_time[1]))
 
     # Create new Workout object
-    workout = Workout(name, category, upcoming, date, start_time, capacity, id=id)
+    workout = Workout(name, category, date, start_time, capacity, id=id)
     # Update in db
     workout_repository.update(workout)
     # Redirect
