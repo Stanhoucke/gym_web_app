@@ -7,7 +7,7 @@
 .workout, .member {
     margin: 10px;
     border-style: solid;
-    border-color: darkblue;
+    border-color: rgb(29, 53, 87);
     border-radius: 10px;
     /* flex: 25%; */
     width: 250px;
@@ -22,14 +22,14 @@
 .workout-name, .member-name {
     display: flex;
     justify-content: space-between;
-    background-color: darkblue;
-    color: ghostwhite;
+    background-color: rgb(29, 53, 87);
+    color: rgb(241, 250, 238);
     padding: 10px;
     grid-area: name;
 }
 
 .workout-name a, .member-name a {
-    color: ghostwhite;
+    color: rgb(241, 250, 238);
     padding: 0;
 }
 

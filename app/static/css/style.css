@@ -5,6 +5,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     margin: 0;
+    color: rgb(29, 53, 87);
 }
 
 
@@ -24,11 +25,17 @@ main {
 }
 
 button {
-    background-color: darkblue;
+    background-color: rgb(29, 53, 87);
     color: ghostwhite;
     margin: 0% 25% 3% 25%;
+    border: none;
+    padding: 5px;
 }
 .delete-button {
-    background-color: darkred;
+    background-color: rgb(230, 57, 70);
     margin: 0;
+}
+
+a {
+    color: rgb(230, 57, 70);
 }

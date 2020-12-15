@@ -1,16 +1,17 @@
 .table {
     border-spacing: 0;
     margin: 1rem;
-    background-color: ghostwhite;
+    background-color: rgb(241, 250, 238);
 }
 
 .table-header {
     text-align: left;
-    background-color: powderblue;
+    background-color: rgb(69, 123, 157);
+    color: rgb(241, 250, 238);
 }
 
 .table-row:nth-child(even) {
-    background-color: powderblue;
+    background-color: rgb(168, 218, 220);
 }
 
 .table td, .table th {
