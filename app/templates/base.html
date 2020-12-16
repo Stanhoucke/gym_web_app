@@ -9,6 +9,7 @@
     
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/bookings.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/forms.css') }}">
@@ -44,12 +45,18 @@
     </main>
     <footer>
         <div id="logo-copyright">
-            <p><b>C 2020 Dragonne</b>All rights reserved</p>
+            <h5><b>&#169; 2020 Dragonne</b> All rights reserved</h5>
         </div>
         <div id="contact-us">
             <h5>Contact us:</h5>
-            <p>tel: 0131 555 0123</p>
-            <p>email: admin@dragonne.com</p>
+            <ul>
+                <li>
+                    tel: 0131 555 0123
+                </li>
+                <li>
+                    email: admin@dragonne.com
+                </li>
+            </ul>
         </div>
     </footer>
 </body>

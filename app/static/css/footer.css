@@ -1,0 +1,36 @@
+footer {
+    background-color: rgb(69, 123, 157);
+    color: rgb(241, 250, 238);
+    display: grid;
+    grid-template-areas: '. logo contact .';
+    grid-template-columns: 1fr 10fr 10fr 1fr;
+}
+
+#logo-copyright {
+    grid-area: logo;
+    display: flex;
+}
+
+#logo-copyright h5 {
+    margin: 10px 0 0 0;
+}
+
+#contact-us {
+    grid-area: contact;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-end;
+    margin: 10px;
+}
+
+#contact-us ul {
+    margin: 0;
+    list-style-type: none;
+    list-style-position: inside;
+    font-size: small;
+}
+
+#contact-us h5 {
+    margin: 0 0 2px 0;
+}
