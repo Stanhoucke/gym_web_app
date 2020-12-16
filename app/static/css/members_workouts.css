@@ -9,8 +9,7 @@
     border-style: solid;
     border-color: rgb(29, 53, 87);
     border-radius: 10px;
-    /* flex: 25%; */
-    width: 250px;
+    width: 275px;
     flex-grow: 0;
     display: grid;
     grid-template-areas:
