@@ -9,7 +9,6 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-
 main {
     display: grid;
     background-color: ghostwhite;
@@ -19,6 +18,14 @@ main {
 
 .section-header {
     margin: 10px;
+}
+
+#club-name {
+    background-color: rgb(69, 123, 157);
+    color: rgb(241, 250, 238);
+    padding: 10px;
+    margin: 0;
+    border-radius: 10px 10px 0 0;
 }
 
 /* Flash messages */
