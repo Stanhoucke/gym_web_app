@@ -18,6 +18,10 @@
     'edit';
 }
 
+.workout {
+    border-color: rgb(168, 218, 220);
+}
+
 .workout-name, .member-name {
     display: flex;
     justify-content: space-between;
@@ -27,7 +31,16 @@
     grid-area: name;
 }
 
-.workout-name a, .member-name a {
+.workout-name {
+    background-color: rgb(168, 218, 220);
+    color: rgb(29, 53, 87);
+}
+.workout-name a {
+    color: rgb(29, 53, 87);
+    padding: 0;
+}
+
+.member-name a {
     color: rgb(241, 250, 238);
     padding: 0;
 }
