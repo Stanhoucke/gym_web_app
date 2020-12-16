@@ -10,8 +10,8 @@ body {
 }
 
 main {
+    background-color: rgba(248, 248, 255, 1);
     display: grid;
-    background-color: ghostwhite;
     margin: 2%;
     border-radius: 10px;
     min-height: -webkit-fill-available;
