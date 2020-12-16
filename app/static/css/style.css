@@ -14,6 +14,7 @@ main {
     background-color: ghostwhite;
     margin: 2%;
     border-radius: 10px;
+    min-height: -webkit-fill-available;
 }
 
 .section-header {
