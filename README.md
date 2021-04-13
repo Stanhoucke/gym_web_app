@@ -30,7 +30,7 @@ PostgreSQL was used in this project. SQL queries are included in the app (gym_ap
 
 To create a database and tables:
 1. `createdb gym_web_app`
-1. `psql d- gym_web_app -f db/gym_app.sql`
+1. `psql -d gym_web_app -f db/gym_app.sql`
 1. If you would like some data to start with, execute the following in the terminal within the app directory: `python3 console.py`
 
 #### Run Web App
